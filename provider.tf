@@ -1,5 +1,4 @@
 provider "google" {
   credentials = file("account.json")
-  project     = "${var.project_id}"
-  region      = "us-central1"
+  project     = "my-nsr"
 }
