@@ -18,8 +18,18 @@ export GOOGLE_APPLICATION_CREDENTIALS={{path}}
 export GOOGLE_APPLICATION_CREDENTIALS=/Users/rootdrigo/account.json
 ```
 ## TF Init
+
+export vars for bucket location
+
+example:
 ```shell
-terraform init
+export TF_VAR_tf_state_bucket="name-bucket"
+export TF_VAR_tf_state_prefix="name-path-bucket-prefix"
+export TF_VAR_credentials="location path of credential for bucket access"
+```
+
+```shell
+terraform init -backend-config "bucket=$TF_VAR_tf_state_bucket" -backend-config "prefix=$TF_VAR_tf_state_prefix" -backend-config "credentials=$TF_VAR_credentials"
 ```
 
 ## TF Plan
