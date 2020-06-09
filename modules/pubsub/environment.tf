@@ -1,10 +1,16 @@
 ##### Topic
 
 variable "name-topic-a" {
-  default = "topic-a"
+  default {
+    qa   = "topic-qa"
+    prod = "topic-prod"
+  }
 }
 
 ##### Subcription
-variable "name-subscription-xa" {
-  default = "subcription-xa"
+variable "name-suscription-a" {
+  default {
+    qa   ="suscription-qa"
+    prod ="suscription-prod"
+  }
 }
