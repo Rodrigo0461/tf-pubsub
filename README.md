@@ -33,13 +33,13 @@ terraform init -backend-config "bucket=$TF_VAR_tf_state_bucket" -backend-config 
 ```
 
 ## TF Plan
-For Plan Set env QA or PROD
+For Plan Set env QA or PROD and set var for project name
 Example:
 ```shell
-terraform plan var="env=qa"
+terraform plan var="env=qa" var="project=name-your-project"
 ```
 
 ## TF Apply
 ```shell
-terraform apply var="env=qa"
+terraform apply var="env=qa" var="project=name-your-project"
 ```
