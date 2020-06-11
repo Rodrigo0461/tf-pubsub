@@ -1,6 +1,5 @@
 ###
-variable "env" {
-    default="qa"
-}
+variable "env" {}
+
 
 
