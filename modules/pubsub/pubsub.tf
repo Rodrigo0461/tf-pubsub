@@ -1,12 +1,9 @@
 resource "google_pubsub_topic" "topic-a" {
+  count   = "${var.name-topic-1["${var.env}"] != "" ? 1 : 0}"
   name    = "${var.name-topic-1["${var.env}"]}"
 }
 
-resource "google_pubsub_subscription" "subcription-xa" {
-  name    = "${var.name-suscription-1["${var.env}"]}."
-  topic   = "${google_pubsub_topic.topic-a.name}"
+resource "google_pubsub_subscription" "suscription-a" {
+  name    = "${var.name-suscription-1["${var.env}"]}"
+  topic   = "${var.name-topic-1["${var.env}"]}"
 }
-
-
-
-
