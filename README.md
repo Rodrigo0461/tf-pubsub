@@ -33,11 +33,13 @@ terraform init -backend-config "bucket=$TF_VAR_tf_state_bucket" -backend-config 
 ```
 
 ## TF Plan
+For Plan Set env QA or PROD
+Example:
 ```shell
-terraform plan
+terraform plan var="env=qa"
 ```
 
 ## TF Apply
 ```shell
-terraform apply
+terraform apply var="env=qa"
 ```
