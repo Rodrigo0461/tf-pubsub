@@ -18,6 +18,10 @@ variable "member-1" {
   default = "rodrigo.pichinual@gmail.com"
 }
 
+variable "member-2" {
+  default = "mathiasd88@gmail.com"
+}
+
 variable "env" {}
 variable "project" {}
   
