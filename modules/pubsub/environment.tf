@@ -14,5 +14,10 @@ variable "name-suscription-1" {
   }
 }
 
+variable "member-1" {
+  default = "rodrigo.pichinual@gmail.com"
+}
+
 variable "env" {}
+variable "project" {}
   
